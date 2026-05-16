@@ -144,7 +144,7 @@ export const products = [
     price: "IDR 200.000",
     description:
       "Balas chat lebih cepat, follow-up pelanggan, catat order, dan tingkatkan repeat order dengan sistem WA yang rapi.",
-    link: "https://rahasia-dagang.com/uno-digitek/ygw5nn21kq1d",
+    link: "https://lynk.id/uno-digitek/ygw5nn21kq1d",
     accent: "from-yellow-700 via-yellow-500 to-amber-400",
     label: "PANDUAN",
   },
@@ -155,7 +155,7 @@ export const products = [
     price: "IDR 150.000",
     description:
       "Bantu bikin promosi harian tanpa bingung mulai dari mana — pakai AI untuk caption, konten, dan strategi jualan.",
-    link: "https://rahasia-dagang.com/uno-digitek/44qvn4lmo8q4",
+    link: "https://lynk.id/uno-digitek/44qvn4lmo8q4",
     accent: "from-amber-800 via-amber-600 to-yellow-400",
     label: "EBOOK",
   },
@@ -166,7 +166,7 @@ export const products = [
     price: "IDR 125.000",
     description:
       "Karena kehilangan akun sama dengan kehilangan toko — panduan lengkap amankan semua akun bisnis digitalmu.",
-    link: "https://rahasia-dagang.com/uno-digitek/qqpkwxz1q263",
+    link: "https://lynk.id/uno-digitek/qqpkwxz1q263",
     accent: "from-yellow-900 via-yellow-600 to-amber-300",
     label: "EBOOK",
   },
@@ -177,7 +177,7 @@ export const products = [
     price: "IDR 200.000",
     description:
       "Copy-paste untuk chat, broadcast, caption, follow-up, dan promo — 50+ template siap pakai untuk UMKM.",
-    link: "https://rahasia-dagang.com/uno-digitek/gy79ydm2qg87",
+    link: "https://lynk.id/uno-digitek/gy79ydm2qg87",
     accent: "from-amber-700 via-yellow-500 to-yellow-300",
     label: "TEMPLATE",
   },
@@ -323,10 +323,10 @@ export const footerColumns = {
     { label: "Cloud & Tools" },
   ],
   products: [
-    { label: "WA JUARA", href: "https://rahasia-dagang.com/uno-digitek/ygw5nn21kq1d" },
-    { label: "AI Promosi & Jualan", href: "https://rahasia-dagang.com/uno-digitek/44qvn4lmo8q4" },
-    { label: "Proteksi Toko Digital", href: "https://rahasia-dagang.com/uno-digitek/qqpkwxz1q263" },
-    { label: "Template UMKM", href: "https://rahasia-dagang.com/uno-digitek/gy79ydm2qg87" },
+    { label: "WA JUARA", href: "https://lynk.id/uno-digitek/ygw5nn21kq1d" },
+    { label: "AI Promosi & Jualan", href: "https://lynk.id/uno-digitek/44qvn4lmo8q4" },
+    { label: "Proteksi Toko Digital", href: "https://lynk.id/uno-digitek/qqpkwxz1q263" },
+    { label: "Template UMKM", href: "https://lynk.id/uno-digitek/gy79ydm2qg87" },
   ],
   social: [
     { label: "YouTube", href: "https://www.youtube.com/@RahasiaDagang78" },
