@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
+import Image from "next/image";
 import { navLinks, siteConfig } from "@/data/site";
 
 export default function Navbar() {
@@ -27,15 +28,8 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 flex items-center justify-between h-[68px]">
         {/* Logo */}
-        <a href="#beranda" className="flex items-center gap-3 flex-shrink-0 group">
-          <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#C9A227] flex items-center justify-center font-extrabold text-[#060e1b] text-[17px] leading-none shadow-lg shadow-[#D4AF37]/20">
-            R
-            <span className="absolute inset-0 rounded-xl ring-1 ring-[#F5C542]/40" />
-          </div>
-          <div className="leading-[1.15]">
-            <div className="text-[#F5C542] font-bold text-[11px] tracking-[0.2em] uppercase">Rahasia</div>
-            <div className="text-white/90 font-bold text-[11px] tracking-[0.2em] uppercase">Dagang</div>
-          </div>
+        <a href="#beranda" className="flex items-center flex-shrink-0">
+          <Image src="/logo.png" alt="RahasiaDagang" width={140} height={48} className="h-10 w-auto object-contain" />
         </a>
 
         {/* Desktop links */}

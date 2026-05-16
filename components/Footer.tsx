@@ -1,4 +1,5 @@
 import { Mail, Phone, Globe } from "lucide-react";
+import Image from "next/image";
 import { siteConfig, footerColumns } from "@/data/site";
 
 export default function Footer() {
@@ -16,15 +17,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             {/* Logo */}
-            <div className="flex items-center gap-3 mb-5">
-              <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#C9A227] flex items-center justify-center font-extrabold text-[#040c18] text-[17px] leading-none shadow-md">
-                R
-                <span className="absolute inset-0 rounded-xl ring-1 ring-[#F5C542]/30" />
-              </div>
-              <div className="leading-[1.15]">
-                <div className="text-[#F5C542] font-bold text-[11px] tracking-[0.2em] uppercase">Rahasia</div>
-                <div className="text-white/80 font-bold text-[11px] tracking-[0.2em] uppercase">Dagang</div>
-              </div>
+            <div className="mb-5">
+              <Image src="/logo.png" alt="RahasiaDagang" width={140} height={48} className="h-10 w-auto object-contain" />
             </div>
 
             <p className="text-[#94A3B8] text-[14px] leading-[1.8] mb-7 max-w-[240px]">
