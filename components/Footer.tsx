@@ -18,7 +18,7 @@ export default function Footer() {
           <div>
             {/* Logo */}
             <div className="mb-5">
-              <Image src="/logo.png" alt="RahasiaDagang" width={140} height={48} className="h-10 w-auto object-contain" />
+              <Image src="/logo.png" alt="RahasiaDagang" width={357} height={122} className="h-[98px] w-auto object-contain" />
             </div>
 
             <p className="text-[#94A3B8] text-[14px] leading-[1.8] mb-7 max-w-[240px]">
