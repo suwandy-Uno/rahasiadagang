@@ -11,6 +11,7 @@ import SocialProofSection from "@/components/SocialProofSection";
 import SocialSection from "@/components/SocialSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { products } from "@/data/site";
 
 /* ISR: revalidate every hour so product covers auto-update when changed on Lynk.id */
@@ -57,6 +58,7 @@ export default async function Home() {
         <CTASection />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }
