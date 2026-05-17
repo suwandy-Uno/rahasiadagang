@@ -152,9 +152,9 @@ const addons = [
 
 const whyUs = [
   { id: "Workflow berbasis AI", en: "AI-powered workflow" },
-  { id: "Proses pengiriman cepat", en: "Fast delivery process" },
+  { id: "Proses pembuatan cepat", en: "Fast development process" },
   { id: "Desain modern premium", en: "Premium modern design" },
-  { id: "Pendekatan mobile-first", en: "Mobile-first approach" },
+  { id: "Pendekatan mobile-first (HP)", en: "Mobile-first approach (HP)" },
   { id: "Struktur siap SEO", en: "SEO-ready structure" },
   { id: "Konversi berbasis WhatsApp", en: "WhatsApp-focused conversion" },
   { id: "Pendekatan branding personal", en: "Personalized branding approach" },
