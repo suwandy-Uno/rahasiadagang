@@ -145,6 +145,7 @@ export const products = [
     description:
       "Balas chat lebih cepat, follow-up pelanggan, catat order, dan tingkatkan repeat order dengan sistem WA yang rapi.",
     link: "https://lynk.id/uno-digitek/ygw5nn21kq1d",
+    image: "/product-wa-juara.png",
     accent: "from-yellow-700 via-yellow-500 to-amber-400",
     label: "PANDUAN",
   },
@@ -156,6 +157,7 @@ export const products = [
     description:
       "Dari HP, tanpa ribet — langsung bisa dipakai hari ini. Strategi jualan, riset pasar, dan ide konten pakai AI.",
     link: "https://lynk.id/uno-digitek/44qvn4lmo8q4",
+    image: "/product-ai-buku1.png",
     accent: "from-amber-800 via-amber-600 to-yellow-400",
     label: "EBOOK",
   },
@@ -167,6 +169,7 @@ export const products = [
     description:
       "Bukan belajar AI — ini SISTEM yang bikin bisnis kamu bisa jalan sendiri. SOP, ekspansi digital, dan scale up.",
     link: "https://lynk.id/uno-digitek/qqpkwxz1q263",
+    image: "/product-ai-buku2.png",
     accent: "from-yellow-900 via-yellow-600 to-amber-300",
     label: "EBOOK",
   },
@@ -178,6 +181,7 @@ export const products = [
     description:
       "Tinggal copy → paste → kirim. 50 template untuk chat, broadcast, caption, follow-up, dan promo siap pakai.",
     link: "https://lynk.id/uno-digitek/gy79ydm2qg87",
+    image: "/product-template.png",
     accent: "from-amber-700 via-yellow-500 to-yellow-300",
     label: "TEMPLATE",
   },

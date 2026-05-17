@@ -6,12 +6,6 @@ import { ArrowUpRight } from "lucide-react";
 import { useContent } from "@/hooks/useContent";
 import SectionBackground from "@/components/SectionBackground";
 
-interface ProductGridProps {
-  /** OG cover images fetched server-side from each product URL (auto-updates when Lynk.id cover changes) */
-  ogImages: (string | null)[];
-}
-
-/* Fallback gradient covers when image isn't available */
 const fallbackBg = [
   "linear-gradient(135deg, #1a2d4a 0%, #0d1e38 60%, #1a2a1a 100%)",
   "linear-gradient(135deg, #1f1a0d 0%, #0d1e38 60%, #1a1030 100%)",
@@ -19,7 +13,7 @@ const fallbackBg = [
   "linear-gradient(135deg, #10200a 0%, #0a1628 60%, #1a2d1a 100%)",
 ];
 
-export default function ProductGrid({ ogImages }: ProductGridProps) {
+export default function ProductGrid() {
   const { products, ui } = useContent();
   return (
     <section id="produk" className="relative py-24 lg:py-32 bg-[#060e1b] overflow-hidden">
@@ -55,7 +49,7 @@ export default function ProductGrid({ ogImages }: ProductGridProps) {
         {/* Products — 4 columns in a single row */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product, i) => {
-            const coverUrl = ogImages[i];
+            const coverUrl = (product as { image?: string }).image ?? null;
             return (
               <motion.article
                 key={product.id}
