@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -49,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`scroll-smooth ${jakarta.variable}`}>
       <body className={`${jakarta.className} bg-[#081120] text-white antialiased`}>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

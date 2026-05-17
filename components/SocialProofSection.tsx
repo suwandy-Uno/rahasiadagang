@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { Star, Quote, ImageIcon } from "lucide-react";
-import { testimonials, successImages } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 
 function ImageWithFallback({ src, alt, placeholder }: { src: string; alt: string; placeholder: string }) {
   const [failed, setFailed] = useState(false);
@@ -29,6 +29,7 @@ function ImageWithFallback({ src, alt, placeholder }: { src: string; alt: string
 }
 
 export default function SocialProofSection() {
+  const { testimonials, ui } = useContent();
   return (
     <section className="relative py-24 lg:py-32 bg-[#060e1b]">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/15 to-transparent" />
@@ -43,13 +44,13 @@ export default function SocialProofSection() {
           className="text-center mb-16"
         >
           <span className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Cerita Nyata
+            {ui.socialProof.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[2.8rem] font-extrabold text-white tracking-tight mb-4">
-            Mereka Sudah Rasakan Manfaatnya
+            {ui.socialProof.heading}
           </h2>
           <p className="text-[#B0C4D4] text-[17px] leading-[1.8] max-w-md mx-auto">
-            Pemilik UMKM dari berbagai kota yang sudah belajar dan langsung mempraktikkan teknologi dalam bisnis harian mereka.
+            {ui.socialProof.subheading}
           </p>
         </motion.div>
 

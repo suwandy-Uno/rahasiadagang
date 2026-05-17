@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { HelpCircle, AlertCircle, Clock, ClipboardList, MessageCircle, Megaphone } from "lucide-react";
-import { problemData } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 import SectionBackground from "@/components/SectionBackground";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -15,6 +15,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export default function ProblemSection() {
+  const { problemData, ui } = useContent();
   return (
     <section className="relative py-24 lg:py-32 bg-[#060e1b] overflow-hidden">
       <SectionBackground
@@ -36,7 +37,7 @@ export default function ProblemSection() {
           className="text-center mb-14"
         >
           <span className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Tantangan Bisnis
+            {ui.problemSection.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[2.8rem] font-extrabold text-white tracking-tight leading-[1.2]">
             {problemData.title}

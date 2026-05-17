@@ -378,3 +378,90 @@ export const successImages = [
     caption: "Promosi lebih konsisten, omset makin stabil.",
   },
 ];
+
+export const ui = {
+  socialProof: {
+    eyebrow: "Cerita Nyata",
+    heading: "Mereka Sudah Rasakan Manfaatnya",
+    subheading:
+      "Pemilik UMKM dari berbagai kota yang sudah belajar dan langsung mempraktikkan teknologi dalam bisnis harian mereka.",
+  },
+  productGrid: {
+    eyebrow: "Produk Digital",
+    heading: "Produk Digital & Toolkit Praktis",
+    subheading: "Panduan siap pakai untuk membantu UMKM langsung belajar dan praktik.",
+    viewDetail: "Lihat Detail",
+  },
+  categoryGrid: {
+    eyebrow: "Topik Belajar",
+    heading: "Kategori Belajar Populer",
+    subheading: "Pilih topik yang paling relevan dengan kebutuhan bisnismu.",
+  },
+  serviceSection: {
+    eyebrow: "Bantuan Implementasi",
+    heading: "Tidak Punya Waktu Belajar? Kami Bantu Implementasikan.",
+    subheading:
+      "Kalau kamu tidak sempat setup sendiri, RahasiaDagang juga bisa bantu menyiapkan sistem jualan sederhana untuk WhatsApp Business, template chat, order tracker, dan alur follow-up pelanggan.",
+    ctaHeading: "Tidak tahu harus mulai dari mana?",
+    ctaSubheading: "Ceritakan kebutuhan bisnismu — kami akan bantu tentukan solusi yang tepat.",
+    ctaButton: "Konsultasi via WhatsApp",
+  },
+  trainingSection: {
+    eyebrow: "Training & Workshop",
+    heading: "Training & Workshop yang Langsung Dipraktikkan",
+    subheading:
+      "Bukan hanya mendengar teori. Peserta diarahkan untuk mencoba, membuat, dan memakai teknologi dalam aktivitas bisnis harian.",
+    ctaButton: "Tanya Jadwal & Harga Training",
+    formats: ["AI & Promosi", "WhatsApp", "Follow-up", "Konten"],
+  },
+  trustSection: {
+    eyebrow: "Kenapa Kami",
+    heading: "Dibuat untuk Pemilik Bisnis yang Mau Langsung Praktik",
+    subheading:
+      "Bukan teori. Bukan tools yang rumit. Semua dirancang agar langsung bisa dipakai oleh pemilik UMKM Indonesia.",
+    highlightPhrase: "Langsung Praktik",
+  },
+  philosophySection: {
+    eyebrow: "Pendekatan Kami",
+  },
+  problemSection: {
+    eyebrow: "Tantangan Bisnis",
+  },
+  socialSection: {
+    eyebrow: "Konten Gratis",
+    heading: "Belajar Gratis dari Konten RahasiaDagang",
+    subheading:
+      "Ikuti konten pendek kami untuk tips AI, WhatsApp, otomasi, dan teknologi praktis untuk bisnis.",
+    visitChannel: "Kunjungi Channel",
+    platformLabels: {
+      YouTube: "Video Tutorial",
+      Instagram: "Tips Harian",
+      TikTok: "Short Video",
+    },
+  },
+  ctaSection: {
+    eyebrow: "Mulai Sekarang",
+    heading: "Tidak Perlu Jadi",
+    headingHighlight: "Jago Teknologi",
+    headingEnd: "untuk Mulai Naik Kelas",
+    subheading:
+      "Mulai dari langkah kecil: rapikan WhatsApp, gunakan AI untuk promosi, follow-up pelanggan, dan bangun sistem jualan yang lebih konsisten.",
+    primaryButton: "Mulai Belajar Sekarang",
+    secondaryButton: "Hubungi untuk Training",
+  },
+  navbar: {
+    consultButton: "Konsultasi Gratis",
+  },
+  footer: {
+    description:
+      "Platform belajar, praktik, dan implementasi teknologi untuk membantu bisnis Indonesia bertumbuh.",
+    navHeading: "Navigasi",
+    categoryHeading: "Kategori",
+    productHeading: "Produk",
+    socialHeading: "Sosial",
+    copyright: "Semua hak dilindungi.",
+    tagline1: "Strategi Jualan",
+    tagline2: "Hasil Nyata",
+    tagline3: "Cuan Terus",
+  },
+};

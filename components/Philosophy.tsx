@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MessageCircle, Cpu, Rocket } from "lucide-react";
-import { philosophyData } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 
 const iconMap: Record<string, React.ReactNode> = {
   MessageCircle: <MessageCircle size={22} className="text-[#D4AF37]" />,
@@ -19,6 +19,7 @@ const BG_IMAGES = [
 ];
 
 export default function Philosophy() {
+  const { philosophyData, ui } = useContent();
   return (
     <section id="filosofi" className="relative py-24 lg:py-32 overflow-hidden bg-[#0a1220]">
 
@@ -68,7 +69,7 @@ export default function Philosophy() {
           className="text-center mb-16"
         >
           <span className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Pendekatan Kami
+            {ui.philosophySection.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[2.8rem] font-extrabold text-white tracking-tight mb-5">
             {philosophyData.title}

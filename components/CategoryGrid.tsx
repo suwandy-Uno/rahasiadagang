@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { AIIcon, WhatsAppIcon, ContentIcon, WebsiteIcon, WorkflowIcon, CloudToolsIcon } from "@/components/icons/BrandIcons";
-import { categories } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 
 /* Map icon key → component + accent colour */
 const iconMap: Record<string, { icon: React.ReactNode; bg: string; ring: string }> = {
@@ -15,6 +15,7 @@ const iconMap: Record<string, { icon: React.ReactNode; bg: string; ring: string 
 };
 
 export default function CategoryGrid() {
+  const { categories, ui } = useContent();
   return (
     <section id="kategori" className="relative py-24 lg:py-32 bg-[#0a1220]">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/25 to-transparent" />
@@ -29,13 +30,13 @@ export default function CategoryGrid() {
           className="text-center mb-14"
         >
           <span className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Topik Belajar
+            {ui.categoryGrid.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[2.8rem] font-extrabold text-white tracking-tight mb-4">
-            Kategori Belajar Populer
+            {ui.categoryGrid.heading}
           </h2>
           <p className="text-[#B0C4D4] text-[17px] max-w-md mx-auto leading-relaxed">
-            Pilih topik yang paling relevan dengan kebutuhan bisnismu.
+            {ui.categoryGrid.subheading}
           </p>
         </motion.div>
 

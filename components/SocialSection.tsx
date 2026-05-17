@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Play, Share2, Music2, ArrowUpRight } from "lucide-react";
-import { socialLinks } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 
 const iconMap: Record<string, React.ReactNode> = {
   Youtube:   <Play   size={22} strokeWidth={1.8} />,
@@ -10,13 +10,9 @@ const iconMap: Record<string, React.ReactNode> = {
   Music2:    <Music2 size={22} strokeWidth={1.8} />,
 };
 
-const platformLabel: Record<string, string> = {
-  YouTube:   "Video Tutorial",
-  Instagram: "Tips Harian",
-  TikTok:    "Short Video",
-};
-
 export default function SocialSection() {
+  const { socialLinks, ui } = useContent();
+  const platformLabel: Record<string, string> = ui.socialSection.platformLabels;
   return (
     <section id="konten" className="relative py-24 lg:py-32 bg-[#060e1b]">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/15 to-transparent" />
@@ -31,13 +27,13 @@ export default function SocialSection() {
           className="text-center mb-14"
         >
           <span className="inline-block text-[#D4AF37] text-[11px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Konten Gratis
+            {ui.socialSection.eyebrow}
           </span>
           <h2 className="text-[2rem] lg:text-[2.6rem] font-extrabold text-white tracking-tight mb-4">
-            Belajar Gratis dari Konten RahasiaDagang
+            {ui.socialSection.heading}
           </h2>
           <p className="text-[#B0C4D4] text-[15px] leading-[1.8] max-w-md mx-auto">
-            Ikuti konten pendek kami untuk tips AI, WhatsApp, otomasi, dan teknologi praktis untuk bisnis.
+            {ui.socialSection.subheading}
           </p>
         </motion.div>
 
@@ -72,7 +68,7 @@ export default function SocialSection() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-[#D4AF37] text-[13px] font-semibold hover:gap-2.5 transition-all"
               >
-                Kunjungi Channel
+                {ui.socialSection.visitChannel}
                 <ArrowUpRight size={13} strokeWidth={2.5} />
               </a>
             </motion.div>

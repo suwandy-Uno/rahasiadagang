@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import { siteConfig } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 
 export default function CTASection() {
+  const { siteConfig, ui } = useContent();
   const waTraining = `https://wa.me/${siteConfig.whatsapp}?text=Halo%20RahasiaDagang%2C%20saya%20ingin%20tanya%20soal%20training.`;
 
   return (
@@ -32,7 +33,7 @@ export default function CTASection() {
           transition={{ duration: 0.5 }}
           className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-6"
         >
-          Mulai Sekarang
+          {ui.ctaSection.eyebrow}
         </motion.span>
 
         <motion.h2
@@ -42,10 +43,10 @@ export default function CTASection() {
           transition={{ delay: 0.1, duration: 0.65 }}
           className="text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] font-extrabold text-white leading-[1.1] tracking-tight mb-6"
         >
-          Tidak Perlu Jadi{" "}
-          <span className="text-[#F5C542]">Jago Teknologi</span>
+          {ui.ctaSection.heading}{" "}
+          <span className="text-[#F5C542]">{ui.ctaSection.headingHighlight}</span>
           <br className="hidden sm:block" />{" "}
-          untuk Mulai Naik Kelas
+          {ui.ctaSection.headingEnd}
         </motion.h2>
 
         <motion.p
@@ -55,7 +56,7 @@ export default function CTASection() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-[#B0C4D4] text-[17px] lg:text-[18px] leading-[1.85] mb-12 max-w-[560px] mx-auto"
         >
-          Mulai dari langkah kecil: rapikan WhatsApp, gunakan AI untuk promosi, follow-up pelanggan, dan bangun sistem jualan yang lebih konsisten.
+          {ui.ctaSection.subheading}
         </motion.p>
 
         <motion.div
@@ -69,7 +70,7 @@ export default function CTASection() {
             href="#produk"
             className="inline-flex items-center justify-center gap-2 h-[54px] px-8 rounded-full bg-gradient-to-r from-[#C9A227] to-[#F5C542] text-[#060e1b] font-bold text-[15px] tracking-wide hover:shadow-2xl hover:shadow-[#D4AF37]/30 hover:scale-[1.02] transition-all"
           >
-            Mulai Belajar Sekarang
+            {ui.ctaSection.primaryButton}
             <ArrowRight size={16} strokeWidth={2.5} />
           </a>
           <a
@@ -79,7 +80,7 @@ export default function CTASection() {
             className="inline-flex items-center justify-center gap-2 h-[54px] px-8 rounded-full border border-[#D4AF37]/40 text-[#D4AF37] font-semibold text-[15px] hover:border-[#D4AF37]/70 hover:bg-[#D4AF37]/8 transition-all"
           >
             <MessageCircle size={16} strokeWidth={2} />
-            Hubungi untuk Training
+            {ui.ctaSection.secondaryButton}
           </a>
         </motion.div>
 

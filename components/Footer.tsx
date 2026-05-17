@@ -1,8 +1,11 @@
+"use client";
+
 import { Mail, Phone, Globe } from "lucide-react";
 import Image from "next/image";
-import { siteConfig, footerColumns } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 
 export default function Footer() {
+  const { siteConfig, footerColumns, ui } = useContent();
   const year = new Date().getFullYear();
 
   return (
@@ -22,7 +25,7 @@ export default function Footer() {
             </div>
 
             <p className="text-[#94A3B8] text-[14px] leading-[1.8] mb-7 max-w-[240px]">
-              Platform belajar, praktik, dan implementasi teknologi untuk membantu bisnis Indonesia bertumbuh.
+              {ui.footer.description}
             </p>
 
             <div className="space-y-3">
@@ -51,7 +54,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">Navigasi</h4>
+            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">{ui.footer.navHeading}</h4>
             <ul className="space-y-2.5">
               {footerColumns.navigation.map((item) => (
                 <li key={item.href}>
@@ -68,7 +71,7 @@ export default function Footer() {
 
           {/* Kategori */}
           <div>
-            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">Kategori</h4>
+            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">{ui.footer.categoryHeading}</h4>
             <ul className="space-y-2.5">
               {footerColumns.categories.map((item) => (
                 <li key={item.label}>
@@ -80,7 +83,7 @@ export default function Footer() {
 
           {/* Produk + Sosial */}
           <div>
-            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">Produk</h4>
+            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">{ui.footer.productHeading}</h4>
             <ul className="space-y-2.5 mb-8">
               {footerColumns.products.map((item) => (
                 <li key={item.label}>
@@ -95,7 +98,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">Sosial</h4>
+            <h4 className="text-white/80 font-semibold text-[12px] tracking-[0.12em] uppercase mb-5">{ui.footer.socialHeading}</h4>
             <ul className="space-y-2.5">
               {footerColumns.social.map((item) => (
                 <li key={item.label}>
@@ -116,14 +119,14 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.06] pt-7 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#64748B] text-[13px]">
-            &copy; {year} RahasiaDagang. Semua hak dilindungi.
+            &copy; {year} RahasiaDagang. {ui.footer.copyright}
           </p>
           <div className="flex items-center gap-2 text-[#64748B] text-[12px] tracking-[0.12em] uppercase">
-            <span>Strategi Jualan</span>
+            <span>{ui.footer.tagline1}</span>
             <span className="w-1 h-1 rounded-full bg-[#D4AF37]/40" />
-            <span>Hasil Nyata</span>
+            <span>{ui.footer.tagline2}</span>
             <span className="w-1 h-1 rounded-full bg-[#D4AF37]/40" />
-            <span>Cuan Terus</span>
+            <span>{ui.footer.tagline3}</span>
           </div>
         </div>
       </div>

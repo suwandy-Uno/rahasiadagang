@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ThumbsUp, CheckCircle, GraduationCap, Star } from "lucide-react";
-import { trustCards } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 
 const iconMap: Record<string, React.ReactNode> = {
   ThumbsUp:      <ThumbsUp      size={22} />,
@@ -33,6 +33,7 @@ function highlightText(text: string, highlight: string) {
 }
 
 export default function TrustSection() {
+  const { trustCards, ui } = useContent();
   return (
     <section id="trust" className="relative py-28 lg:py-36 overflow-hidden bg-[#020817]">
 
@@ -98,16 +99,13 @@ export default function TrustSection() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-amber-400/8 rounded-full blur-[80px] pointer-events-none" />
 
           <span className="inline-block text-amber-400 text-[11px] font-semibold tracking-[0.25em] uppercase mb-5">
-            Kenapa Kami
+            {ui.trustSection.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[3rem] font-extrabold text-white tracking-tight leading-[1.15] max-w-2xl mx-auto">
-            {highlightText(
-              "Dibuat untuk Pemilik Bisnis yang Mau Langsung Praktik",
-              "Langsung Praktik"
-            )}
+            {highlightText(ui.trustSection.heading, ui.trustSection.highlightPhrase)}
           </h2>
           <p className="text-slate-300 text-[16px] leading-relaxed max-w-xl mx-auto mt-5">
-            Bukan teori. Bukan tools yang rumit. Semua dirancang agar langsung bisa dipakai oleh pemilik UMKM Indonesia.
+            {ui.trustSection.subheading}
           </p>
         </motion.div>
 

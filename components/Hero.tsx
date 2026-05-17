@@ -2,7 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, MessageCircle, Check, Cpu, Globe, Zap } from "lucide-react";
-import { heroData, siteConfig } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 import SectionBackground from "@/components/SectionBackground";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -39,6 +39,7 @@ const fadeUp: Variants = {
 const VISIBLE_CARDS = 3;
 
 export default function Hero() {
+  const { heroData, siteConfig } = useContent();
   const waLink = `https://wa.me/${siteConfig.whatsapp}?text=Halo%20RahasiaDagang%2C%20saya%20ingin%20konsultasi%20training%2Fworkshop.`;
   const visibleCards = heroData.floatingCards.slice(0, VISIBLE_CARDS);
 

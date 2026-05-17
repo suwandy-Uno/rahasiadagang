@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ClipboardList, LayoutGrid, MessageCircle, Megaphone, Users, Lightbulb, ArrowRight } from "lucide-react";
-import { services, siteConfig } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 import SectionBackground from "@/components/SectionBackground";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -15,6 +15,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export default function ServiceSection() {
+  const { services, siteConfig, ui } = useContent();
   const waLink = `https://wa.me/${siteConfig.whatsapp}?text=Halo%20RahasiaDagang%2C%20saya%20ingin%20konsultasi%20kebutuhan%20bisnis.`;
 
   return (
@@ -38,13 +39,13 @@ export default function ServiceSection() {
           className="max-w-2xl mb-14"
         >
           <span className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Bantuan Implementasi
+            {ui.serviceSection.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[2.8rem] font-extrabold text-white tracking-tight mb-4">
-            Tidak Punya Waktu Belajar? Kami Bantu Implementasikan.
+            {ui.serviceSection.heading}
           </h2>
           <p className="text-[#B0C4D4] text-[17px] leading-[1.8]">
-            Kalau kamu tidak sempat setup sendiri, RahasiaDagang juga bisa bantu menyiapkan sistem jualan sederhana untuk WhatsApp Business, template chat, order tracker, dan alur follow-up pelanggan.
+            {ui.serviceSection.subheading}
           </p>
         </motion.div>
 
@@ -84,8 +85,8 @@ export default function ServiceSection() {
           style={{ background: "rgba(212,175,55,0.04)" }}
         >
           <div className="flex-1">
-            <p className="text-white font-bold text-[18px] mb-1.5">Tidak tahu harus mulai dari mana?</p>
-            <p className="text-[#94A3B8] text-[15px]">Ceritakan kebutuhan bisnismu — kami akan bantu tentukan solusi yang tepat.</p>
+            <p className="text-white font-bold text-[18px] mb-1.5">{ui.serviceSection.ctaHeading}</p>
+            <p className="text-[#94A3B8] text-[15px]">{ui.serviceSection.ctaSubheading}</p>
           </div>
           <a
             href={waLink}
@@ -93,7 +94,7 @@ export default function ServiceSection() {
             rel="noopener noreferrer"
             className="flex-shrink-0 inline-flex items-center gap-2 h-[50px] px-7 rounded-full bg-gradient-to-r from-[#C9A227] to-[#F5C542] text-[#060e1b] font-bold text-[14px] tracking-wide hover:shadow-xl hover:shadow-[#D4AF37]/20 hover:scale-[1.02] transition-all whitespace-nowrap"
           >
-            Konsultasi via WhatsApp
+            {ui.serviceSection.ctaButton}
             <ArrowRight size={15} strokeWidth={2.5} />
           </a>
         </motion.div>

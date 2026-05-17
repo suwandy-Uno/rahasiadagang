@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
 import Image from "next/image";
-import { navLinks, siteConfig } from "@/data/site";
+import { useLanguage } from "@/context/LanguageContext";
+import { useContent } from "@/hooks/useContent";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { lang, toggleLang } = useLanguage();
+  const { navLinks, siteConfig, ui } = useContent();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -46,16 +49,24 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
-        <a
-          href={waLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C9A227] to-[#F5C542] text-[#060e1b] font-semibold text-[14px] hover:shadow-lg hover:shadow-[#D4AF37]/25 hover:scale-[1.02] transition-all"
-        >
-          <MessageCircle size={14} strokeWidth={2.5} />
-          Konsultasi Gratis
-        </a>
+        {/* Language toggle + CTA */}
+        <div className="hidden lg:flex items-center gap-3">
+          <button
+            onClick={toggleLang}
+            className="text-[13px] font-semibold text-[#D4AF37] border border-[#D4AF37]/40 rounded-full px-3 py-1 hover:bg-[#D4AF37]/10 transition-all"
+          >
+            {lang === "id" ? "EN" : "ID"}
+          </button>
+          <a
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#C9A227] to-[#F5C542] text-[#060e1b] font-semibold text-[14px] hover:shadow-lg hover:shadow-[#D4AF37]/25 hover:scale-[1.02] transition-all"
+          >
+            <MessageCircle size={14} strokeWidth={2.5} />
+            {ui.navbar.consultButton}
+          </a>
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -89,7 +100,13 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
-              <li className="pt-3 border-t border-white/5 mt-2">
+              <li className="pt-3 border-t border-white/5 mt-2 flex flex-col gap-2.5">
+                <button
+                  onClick={toggleLang}
+                  className="self-start text-[13px] font-semibold text-[#D4AF37] border border-[#D4AF37]/40 rounded-full px-4 py-1.5 hover:bg-[#D4AF37]/10 transition-all"
+                >
+                  {lang === "id" ? "Switch to English" : "Ganti ke Indonesia"}
+                </button>
                 <a
                   href={waLink}
                   target="_blank"
@@ -97,7 +114,7 @@ export default function Navbar() {
                   className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-gradient-to-r from-[#C9A227] to-[#F5C542] text-[#060e1b] font-semibold text-[14px]"
                 >
                   <MessageCircle size={15} strokeWidth={2.5} />
-                  Konsultasi Gratis
+                  {ui.navbar.consultButton}
                 </a>
               </li>
             </ul>

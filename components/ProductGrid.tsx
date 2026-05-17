@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { products } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 import SectionBackground from "@/components/SectionBackground";
 
 interface ProductGridProps {
@@ -20,6 +20,7 @@ const fallbackBg = [
 ];
 
 export default function ProductGrid({ ogImages }: ProductGridProps) {
+  const { products, ui } = useContent();
   return (
     <section id="produk" className="relative py-24 lg:py-32 bg-[#060e1b] overflow-hidden">
       <SectionBackground
@@ -41,13 +42,13 @@ export default function ProductGrid({ ogImages }: ProductGridProps) {
           className="text-center mb-14"
         >
           <span className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Produk Digital
+            {ui.productGrid.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[2.8rem] font-extrabold text-white tracking-tight mb-4">
-            Produk Digital &amp; Toolkit Praktis
+            {ui.productGrid.heading}
           </h2>
           <p className="text-[#B0C4D4] text-[17px] max-w-md mx-auto leading-relaxed">
-            Panduan siap pakai untuk membantu UMKM langsung belajar dan praktik.
+            {ui.productGrid.subheading}
           </p>
         </motion.div>
 
@@ -114,7 +115,7 @@ export default function ProductGrid({ ogImages }: ProductGridProps) {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 h-8 px-3.5 rounded-full bg-gradient-to-r from-[#C9A227] to-[#F5C542] text-[#060e1b] font-bold text-[11px] tracking-wide hover:shadow-lg hover:shadow-[#D4AF37]/20 hover:scale-[1.03] transition-all"
                     >
-                      Lihat Detail
+                      {ui.productGrid.viewDetail}
                       <ArrowUpRight size={11} strokeWidth={2.5} />
                     </a>
                   </div>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Cpu, MessageCircle, Zap, Megaphone } from "lucide-react";
-import { trainingCards, siteConfig } from "@/data/site";
+import { useContent } from "@/hooks/useContent";
 import SectionBackground from "@/components/SectionBackground";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -12,10 +12,10 @@ const iconMap: Record<string, React.ReactNode> = {
   Megaphone:     <Megaphone     size={22} />,
 };
 
-const formats = ["AI & Promosi", "WhatsApp", "Follow-up", "Konten"];
-
 export default function TrainingSection() {
+  const { trainingCards, siteConfig, ui } = useContent();
   const waLink = `https://wa.me/${siteConfig.whatsapp}?text=Halo%20RahasiaDagang%2C%20saya%20ingin%20tanya%20tentang%20training.`;
+  const formats = ui.trainingSection.formats;
 
   return (
     <section id="training" className="relative py-24 lg:py-32 bg-[#060e1b] overflow-hidden">
@@ -40,13 +40,13 @@ export default function TrainingSection() {
           className="text-center mb-16"
         >
           <span className="inline-block text-[#D4AF37] text-[12px] font-semibold tracking-[0.2em] uppercase mb-4">
-            Training &amp; Workshop
+            {ui.trainingSection.eyebrow}
           </span>
           <h2 className="text-[2.25rem] lg:text-[2.8rem] font-extrabold text-white tracking-tight mb-4 max-w-2xl mx-auto">
-            Training &amp; Workshop yang Langsung Dipraktikkan
+            {ui.trainingSection.heading}
           </h2>
           <p className="text-[#B0C4D4] text-[17px] leading-[1.8] max-w-xl mx-auto">
-            Bukan hanya mendengar teori. Peserta diarahkan untuk mencoba, membuat, dan memakai teknologi dalam aktivitas bisnis harian.
+            {ui.trainingSection.subheading}
           </p>
         </motion.div>
 
@@ -94,7 +94,7 @@ export default function TrainingSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 h-[50px] px-8 rounded-full border border-[#D4AF37]/40 text-[#D4AF37] font-semibold text-[14px] hover:border-[#D4AF37]/70 hover:bg-[#D4AF37]/8 transition-all"
           >
-            Tanya Jadwal &amp; Harga Training
+            {ui.trainingSection.ctaButton}
           </a>
         </motion.div>
       </div>
