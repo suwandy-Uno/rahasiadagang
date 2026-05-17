@@ -54,7 +54,7 @@ export const metadata: Metadata = {
       "Belajar AI untuk UMKM Indonesia. Website AI, chatbot AI, WhatsApp automation, dan strategi digital untuk meningkatkan penjualan bisnis Anda.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "Rahasia Dagang - AI untuk UMKM Indonesia",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     title: "Rahasia Dagang - AI untuk UMKM Indonesia",
     description:
       "Belajar AI untuk UMKM Indonesia. Website AI, chatbot AI, WhatsApp automation, dan strategi digital untuk meningkatkan penjualan bisnis Anda.",
-    images: ["/og-image.png"],
+    images: ["/og.png"],
     creator: "@rahasiadagang",
   },
   verification: {},
