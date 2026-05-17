@@ -53,7 +53,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggleLang}
-            className="text-[13px] font-semibold text-[#D4AF37] border border-[#D4AF37]/40 rounded-full px-3 py-1 hover:bg-[#D4AF37]/10 transition-all"
+            className="text-[13px] font-bold text-[#060e1b] bg-gradient-to-r from-[#C9A227] to-[#F5C542] rounded-full px-4 py-1.5 hover:shadow-md hover:shadow-[#D4AF37]/30 hover:scale-[1.04] transition-all"
           >
             {lang === "id" ? "EN" : "ID"}
           </button>
@@ -103,7 +103,7 @@ export default function Navbar() {
               <li className="pt-3 border-t border-white/5 mt-2 flex flex-col gap-2.5">
                 <button
                   onClick={toggleLang}
-                  className="self-start text-[13px] font-semibold text-[#D4AF37] border border-[#D4AF37]/40 rounded-full px-4 py-1.5 hover:bg-[#D4AF37]/10 transition-all"
+                  className="self-start text-[13px] font-bold text-[#060e1b] bg-gradient-to-r from-[#C9A227] to-[#F5C542] rounded-full px-5 py-1.5 hover:shadow-md hover:shadow-[#D4AF37]/30 transition-all"
                 >
                   {lang === "id" ? "Switch to English" : "Ganti ke Indonesia"}
                 </button>
