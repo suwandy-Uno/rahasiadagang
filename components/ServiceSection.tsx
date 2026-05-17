@@ -18,12 +18,12 @@ function PackageImage({ src, alt }: { src: string; alt: string }) {
     );
   }
   return (
-    <div className="relative w-full h-48 rounded-xl overflow-hidden">
+    <div className="relative w-full rounded-xl overflow-hidden bg-slate-900" style={{ aspectRatio: "3/2" }}>
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className="object-contain"
         sizes="(max-width: 768px) 100vw, 50vw"
         onError={() => setFailed(true)}
       />
