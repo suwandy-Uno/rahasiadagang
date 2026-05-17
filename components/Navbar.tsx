@@ -32,7 +32,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 flex items-center justify-between h-[68px]">
         {/* Logo */}
         <a href="#beranda" className="flex items-center flex-shrink-0">
-          <Image src="/logo.png" alt="RahasiaDagang" width={357} height={122} className="h-[98px] w-auto object-contain" />
+          <Image src="/logo.png" alt="RahasiaDagang" width={143} height={49} className="h-[39px] w-auto object-contain" />
         </a>
 
         {/* Desktop links */}
