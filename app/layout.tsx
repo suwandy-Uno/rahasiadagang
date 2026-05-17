@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Schema from "./schema";
+import { Analytics } from "@vercel/analytics/react";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -93,6 +94,7 @@ export default function RootLayout({
       <body className={`${jakarta.className} bg-[#081120] text-white antialiased`}>
         <Schema />
         <LanguageProvider>{children}</LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
