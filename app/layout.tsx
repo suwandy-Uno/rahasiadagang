@@ -90,6 +90,12 @@ export default function RootLayout({
           href="/toko-sembako.png"
           fetchPriority="high"
         />
+        {/* Google AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2494373577921258"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${jakarta.className} bg-[#081120] text-white antialiased`}>
         <Schema />
