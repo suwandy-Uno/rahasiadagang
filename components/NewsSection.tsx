@@ -1,5 +1,5 @@
 import { fetchNews } from "@/lib/rss";
-import Image from "next/image";
+import NewsImage from "@/components/NewsImage";
 
 function timeAgo(dateStr: string): string {
   const now = Date.now();
@@ -79,16 +79,12 @@ export default async function NewsSection() {
               >
                 <div className="flex flex-col lg:flex-row">
                   {featured.image && (
-                    <div className="relative lg:w-[460px] h-52 lg:h-auto flex-shrink-0 overflow-hidden bg-slate-800">
-                      <Image
-                        src={featured.image}
-                        alt={featured.title}
-                        fill
-                        className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                        sizes="(max-width: 1024px) 100vw, 460px"
-                        unoptimized
-                      />
-                    </div>
+                    <NewsImage
+                      src={featured.image}
+                      alt={featured.title}
+                      sizes="(max-width: 1024px) 100vw, 460px"
+                      featured
+                    />
                   )}
                   <div className="flex flex-col justify-center p-6 lg:p-10 flex-1">
                     <div className="flex items-center gap-3 mb-4">
@@ -133,19 +129,12 @@ export default async function NewsSection() {
                   rel="noopener noreferrer"
                   className="group flex flex-col rounded-2xl border border-white/10 bg-slate-900/80 overflow-hidden hover:border-[#D4AF37]/40 hover:shadow-[0_0_28px_rgba(212,175,55,0.10)] transition-all duration-300"
                 >
-                  {item.image ? (
-                    <div className="relative h-40 overflow-hidden flex-shrink-0 bg-slate-800">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        unoptimized
-                      />
-                    </div>
-                  ) : (
-                    <div className="h-1.5 flex-shrink-0 bg-gradient-to-r from-[#C9A227] to-[#F5C542]" />
+                  {item.image && (
+                    <NewsImage
+                      src={item.image}
+                      alt={item.title}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
                   )}
                   <div className="flex flex-col flex-1 p-5">
                     <div className="flex items-center gap-2 mb-3">
