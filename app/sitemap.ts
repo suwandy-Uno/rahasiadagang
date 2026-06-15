@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: "https://rahasia-dagang.com/berita",
+      url: "https://rahasia-dagang.com/#berita",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.9,

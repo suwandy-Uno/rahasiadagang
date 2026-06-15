@@ -15,7 +15,7 @@ export const navLinks = [
   { label: "Toolkit", href: "#produk" },
   { label: "Business Solutions", href: "#solusi" },
   { label: "Training", href: "#training" },
-  { label: "SME News", href: "/berita" },
+  { label: "SME News", href: "#berita" },
   { label: "About Us", href: "#filosofi" },
   { label: "Contact", href: "#kontak" },
 ];

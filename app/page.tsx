@@ -12,6 +12,9 @@ import SocialSection from "@/components/SocialSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import NewsSection from "@/components/NewsSection";
+
+export const revalidate = 86400;
 
 export default function Home() {
   return (
@@ -27,6 +30,7 @@ export default function Home() {
         <ServiceSection />
         <TrainingSection />
         <TrustSection />
+        <NewsSection />
         <SocialSection />
         <CTASection />
       </main>
