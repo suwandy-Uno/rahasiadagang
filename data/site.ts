@@ -15,7 +15,7 @@ export const navLinks = [
   { label: "Toolkit", href: "#produk" },
   { label: "Solusi Bisnis", href: "#solusi" },
   { label: "Training", href: "#training" },
-  { label: "Studi Kasus", href: "#trust" },
+  { label: "Berita UMKM", href: "/berita" },
   { label: "Tentang Kami", href: "#filosofi" },
   { label: "Kontak", href: "#kontak" },
 ];
