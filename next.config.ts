@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isDev = process.env.NODE_ENV === "development";
+
 const securityHeaders = [
   {
     key: "X-DNS-Prefetch-Control",
@@ -33,11 +35,11 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+      `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://va.vercel-scripts.com https://pagead2.googlesyndication.com`,
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https://cdn.lynkid.my.id https://images.unsplash.com https://*.unsplash.com",
-      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com",
+      "img-src 'self' data: https:",
+      "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://googleads.g.doubleclick.net",
       "frame-ancestors 'none'",
     ].join("; "),
   },
